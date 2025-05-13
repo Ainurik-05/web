@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333:
+}
+
+form {
+    margin: 20px 0;
+}
+
+input, selet {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.ots{
+    width: 1700px;
+    margin: 0 auto;
+}
+.ots h1{
+    margin-left:550px;
+    font-size:50px;
+    margin-top:300px;
+}
+.ots div{
+    margin-left: 670px;
+    font-size:25px;
+}

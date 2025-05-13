@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плейлисты</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Ваши Плейлисты</h1>
+    <ul>
+        {% for playlist in playlists %}
+            <li>{{ playlist.name }}</li>
+            <audio controls>
+                <source src="{{ url_for('static', filename='music/' + playlist.songs) }}" type="audio/mpeg">
+                Ваш браузер не поддерживает аудио.
+            </audio>
+        {% endfor %}
+    </ul>
+    <div>
+        <a href="{{ url_for('upload_file') }}">Загрузить Музыку</a>
+        <a href="{{ url_for('logout') }}">Выйти</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка музыки</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Загрузить Музыкальный Файл</h1>
+    <form method="POST" enctype="multipart/form-data" action="">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.music_file.label }} {{ form.music_file() }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+    <div>
+        <a href="{{ url_for('playlists') }}">Назад к плейлистам</a>
+    </div>
+</body>
+</html>
